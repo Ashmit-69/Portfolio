@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashmit Basu — Portfolio</title>
+  <!-- Internal CSS -->
+  <style>
+    :root {
+      --bg: #0f172a;          /* slate-900 */
+      --card: #111827;        /* gray-900 */
+      --accent: #22d3ee;      /* cyan-400 */
+      --text: #e5e7eb;        /* gray-200 */
+      --muted: #9ca3af;       /* gray-400 */
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg, var(--bg), #0b1025 60%);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      scroll-behavior: smooth;
+    }
+
+    a { color: var(--accent); }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(17, 24, 39, 0.85);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 16px; }
+
+    nav {
+      display: flex; gap: 16px; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    }
+
+    nav .links a { text-decoration: none; padding: 8px 12px; border-radius: 999px; }
+    nav .links a:hover { background: rgba(255,255,255,.08); }
+
+    .hero {
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center; padding: 48px 16px 16px;
+    }
+
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 20px; }
+
+    h1, h2, h3 { color: white; margin-top: 0; }
+
+    section { padding: 40px 16px; }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+
+    .gallery img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; border: 1px solid rgba(255,255,255,.08); }
+
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid rgba(255,255,255,.1); padding: 10px; text-align: left; }
+    th { background: rgba(255,255,255,.05); }
+
+    .skills-progress { display: grid; gap: 10px; margin-top: 16px; }
+
+    progress { width: 100%; height: 14px; }
+
+    footer { text-align: center; padding: 32px 16px; background: #0b1025; color: var(--muted); border-top: 1px solid rgba(255,255,255,.08); }
+
+    /* Example inline style will also be shown in HTML below to satisfy requirement */
+
+    .tag { display: inline-block; font-size: 12px; padding: 4px 10px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; color: var(--muted); }
+
+    form { display: grid; gap: 12px; }
+    input, textarea, button, select {
+      background: #0b122b; color: var(--text); border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: 10px 12px; font-size: 16px;
+    }
+    button { background: var(--accent); color: #041218; font-weight: 700; cursor: pointer; }
+    button:hover { filter: brightness(1.05); }
+  </style>
+</head>
+<body>
+  <!-- ===== Header with internal navigation (internal links) ===== -->
+  <header>
+    <div class="container">
+      <nav>
+        <strong style="font-size: 18px; letter-spacing: .5px;">AB • Portfolio</strong>
+        <div class="links">
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#skills">Skills</a>
+          <a href="#hobbies">Hobbies</a>
+          <a href="#contact">Contact</a>
+          <a href="#media">Media</a>
+          <a href="#art">Canvas Art</a>
+          <a href="#info">Personal Info</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero / Header Section ===== -->
+    <section id="home" class="container">
+      <div class="hero">
+        <div class="card">
+          <h1>Hi, I’m <u>Ashmit Basu</u>.</h1>
+          <p>
+            I’m a <b>2nd year B.Tech (CSE)</b> student who enjoys engineering systems and crafting visual, interactive experiences. I’m learning to blend
+            <b>software development</b> with <b>creative design</b> — aiming to someday build <i>immersive, story‑driven games</i> like the ones that inspire me.
+          </p>
+          <p>
+            I work with <b>Python</b> (my strongest language), C, C++, Java, SQL/MySQL, and HTML. Right now, I’m strengthening both my technical foundation
+            and my understanding of how interfaces feel — through <u>UI/UX</u> and <u>animation</u>.
+          </p>
+        </div>
+        <div class="card">
+          <img src="C:\Users\HP\OneDrive\Desktop\Portfolio IWP Activity\Portfolio img.jpg" alt="Ashmit Basu profile photo" width="180" height="180" style="display:block; border-radius:50%; border:2px solid rgba(255,255,255,.2); object-fit:cover; margin-bottom:12px;" />
+          <a href="https://www.linkedin.com/in/ashmit-basu-498783334" target="_blank" rel="noopener">LinkedIn — Ashmit Basu</a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="container card">
+        <h2 id="about-title">About</h2>
+        <p>
+          I’m a <b>2nd year B.Tech student</b> in the <u>Computer Science & Engineering</u> branch, building my foundations while exploring the craft of software.
+          I’m especially intrigued by <i>video games</i> and their beautifully developed worlds — and I’d love to create
+          something like that of my own down the line.
+        </p>
+        <p>
+          Languages I work with include <b>Python</b> (started in 11th grade and most experienced), C, C++, Java, MySQL, and HTML. I learned HTML in school but
+          haven’t used it much in the last 3+ years, so I’m currently refreshing it.
+        </p>
+        <p>
+          This paragraph shows <b>bold</b>, <i>italic</i>, and <u>underlined</u> text formatting as required.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Gallery Section with at least 3 images ===== -->
+    <section id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title">Gallery</h2>
+        <div class="grid-3 gallery">
+          <figure class="card">
+            <img src="C:\Users\HP\OneDrive\Desktop\Portfolio IWP Activity\analytics_dashboard_example.png" alt="Project dashboard mockup" width="600" height="400" />
+            <figcaption style="color: var(--muted); margin-top: 8px;">Analytics Dashboard</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="C:\Users\HP\OneDrive\Desktop\Portfolio IWP Activity\mobile_ui_example.png" alt="Mobile app screens preview" width="600" height="400" />
+            <figcaption style="color: var(--muted); margin-top: 8px;">Mobile App UI</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="C:\Users\HP\OneDrive\Desktop\Portfolio IWP Activity\landing_page_example.png" alt="Landing page hero section" width="600" height="400" />
+            <figcaption style="color: var(--muted); margin-top: 8px;">Landing Page</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills Section: Table + Progress bars ===== -->
+    <section id="skills" aria-labelledby="skills-title">
+      <div class="container card">
+        <h2 id="skills-title">Skills</h2>
+        <p>My core areas: <strong>Frontend</strong> • <strong>Backend</strong> • <strong>Tools</strong></p>
+
+        <div class="grid-3" style="margin-top:12px;">
+          <div class="card">
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS (basics)</li>
+              <li>JavaScript fundamentals</li>
+            </ul>
+            <div class="skills-progress" aria-label="Frontend Progress">
+              <div class="bar"><label for="p-html">HTML</label>
+                <progress id="p-html" max="100" value="40">40%</progress>
+                <span class="pct" data-for="p-html">40%</span>
+              </div>
+              <div class="bar"><label for="p-css">CSS</label>
+                <progress id="p-css" max="100" value="45">45%</progress>
+                <span class="pct" data-for="p-css">45%</span>
+              </div>
+              <div class="bar"><label for="p-js">JavaScript</label>
+                <progress id="p-js" max="100" value="50">50%</progress>
+                <span class="pct" data-for="p-js">50%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Backend</h3>
+            <ul>
+              <li>Python</li>
+              <li>Java (core)</li>
+              <li>C / C++</li>
+              <li>MySQL</li>
+            </ul>
+            <div class="skills-progress" aria-label="Backend Progress">
+              <div class="bar"><label for="p-python">Python</label>
+                <progress id="p-python" max="100" value="90">90%</progress>
+                <span class="pct" data-for="p-python">90%</span>
+              </div>
+              <div class="bar"><label for="p-java">Java</label>
+                <progress id="p-java" max="100" value="65">65%</progress>
+                <span class="pct" data-for="p-java">65%</span>
+              </div>
+              <div class="bar"><label for="p-cpp">C++</label>
+                <progress id="p-cpp" max="100" value="60">60%</progress>
+                <span class="pct" data-for="p-cpp">60%</span>
+              </div>
+              <div class="bar"><label for="p-c">C</label>
+                <progress id="p-c" max="100" value="55">55%</progress>
+                <span class="pct" data-for="p-c">55%</span>
+              </div>
+              <div class="bar"><label for="p-sql">SQL / MySQL</label>
+                <progress id="p-sql" max="100" value="60">60%</progress>
+                <span class="pct" data-for="p-sql">60%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Tools</h3>
+            <ul>
+              <li>UI/UX design</li>
+              <li>Git & version control</li>
+              <li>Figma (basics)</li>
+            </ul>
+            <div class="skills-progress" aria-label="Tools Progress">
+              <div class="bar"><label for="p-ux">UI/UX Design</label>
+                <progress id="p-ux" max="100" value="55">55%</progress>
+                <span class="pct" data-for="p-ux">55%</span>
+              </div>
+              <div class="bar"><label for="p-git">Git</label>
+                <progress id="p-git" max="100" value="50">50%</progress>
+                <span class="pct" data-for="p-git">50%</span>
+              </div>
+              <div class="bar"><label for="p-figma">Figma</label>
+                <progress id="p-figma" max="100" value="45">45%</progress>
+                <span class="pct" data-for="p-figma">45%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Hobbies (ul) & Strengths (ol) ===== -->
+    <section id="hobbies" aria-labelledby="hobbies-title">
+      <div class="container grid-3">
+        <div class="card">
+          <h2 id="hobbies-title">Hobbies</h2>
+          <ul>
+            <li>Reading books</li>
+            <li>Playing the piano</li>
+            <li>Learning animation</li>
+            <li>Story‑driven video games</li>
+            <li>Nature photography</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Strengths</h2>
+          <ol>
+            <li>Clear communication</li>
+            <li>Attention to detail</li>
+            <li>Reliable delivery</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h2>Game Worlds That Inspire Me</h2>
+          <ul>
+            <li>Red Dead Redemption 2</li>
+            <li>God of War (2018 & Ragnarok)</li>
+            <li>Detroit: Become Human</li>
+            <li>Genshin Impact</li>
+            <li>Open‑world, narrative‑driven adventures</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact Section: Form with name, email, message ===== -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container card">
+        <h2 id="contact-title">Contact</h2>
+        <form action="#" method="post">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your full name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can I help?" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Canvas Section: Simple shape with JS ===== -->
+    
+
+    <!-- ===== Canvas Section: Interactive Art ===== -->
+    <section id="art" aria-labelledby="art-title">
+      <div class="container card">
+        <h2 id="art-title">Canvas Art</h2>
+        <p>Move your mouse over the canvas or press keys <kbd>R</kbd>, <kbd>C</kbd> to switch shapes. Click to pause/play animation.</p>
+        <canvas id="myCanvas" width="600" height="260" style="width:100%; max-width:600px; border-radius: 12px; border:1px solid rgba(255,255,255,.1);"></canvas>
+        <div style="margin-top:8px; color:var(--muted);">Status: <span id="animStatus">playing</span> • Shape: <span id="shapeName">circle</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Media Section: Embed audio and video ===== -->
+    <section id="media" aria-labelledby="media-title">
+      <div class="container grid-3">
+        <div class="card">
+          <h2 id="media-title">Intro Audio</h2>
+          <audio controls>
+            <!-- Replace with your own mp3 file path -->
+            <source src="https://filesamples.com/samples/audio/mp3/sample3.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="card">
+          <h2>Intro Video</h2>
+          <video controls width="100%" height="240" style="border-radius: 12px;">
+            <source src="C:\Users\HP\OneDrive\Desktop\Portfolio IWP Activity\Intro video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="card">
+          <h2>Download Résumé</h2>
+          <p><a href="#">Coming soon</a></p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- ===== Personal Info Section ===== -->
+    <section id="info" aria-labelledby="info-title">
+      <div class="container card">
+        <h2 id="info-title">Contact</h2>
+        <ul>
+          <li><b>Name:</b> Ashmit Basu</li>
+          <li><b>Email:</b> <a href="mailto:you@example.com">ashmit.24bce11037@vitbhopal.ac.in</a></li>
+          <li><b>Phone:</b> <a href="tel:+910000000000">+91 9009018801</a></li>
+          <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/ashmit-basu-498783334" target="_blank" rel="noopener">linkedin.com/in/ashmit-basu-498783334</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Ashmit Basu — All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ===== Profile upload preview =====
+    const fileInput = document.getElementById('avatar');
+    const avatarPreview = document.getElementById('avatarPreview');
+    if (fileInput) {
+      fileInput.addEventListener('change', (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        const url = URL.createObjectURL(file);
+        avatarPreview.src = url;
+        avatarPreview.alt = file.name;
+      });
+    }
+
+    // ===== Update percentage labels next to progress bars =====
+    document.querySelectorAll('.skills-progress .bar').forEach(bar => {
+      const prog = bar.querySelector('progress');
+      const pct = bar.querySelector('.pct');
+      const update = () => { pct.textContent = `${prog.value}%`; };
+      update();
+      prog.addEventListener('input', update);
+    });
+
+    // ===== Interactive Canvas =====
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    let running = true;
+    let shape = 'circle';
+    let t = 0;
+    const statusEl = document.getElementById('animStatus');
+    const shapeEl = document.getElementById('shapeName');
+
+    function draw(w, h, mx = w/2, my = h/2) {
+      const hue = (t*0.5) % 360;
+      ctx.fillStyle = `hsl(${hue}, 80%, 45%)`;
+      ctx.fillRect(0, 0, w, h);
+
+      const cx = mx * 0.15 + w*0.425;
+      const cy = my * 0.15 + h*0.425;
+
+      ctx.lineWidth = 6;
+      ctx.strokeStyle = '#e5e7eb';
+      ctx.fillStyle = '#111827';
+
+      if (shape === 'circle') {
+        const r = 50 + 10 * Math.sin(t/10);
+        ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI*2); ctx.fill(); ctx.stroke();
+      } else {
+        const s = 90 + 10 * Math.cos(t/10);
+        ctx.beginPath(); ctx.rect(cx - s/2, cy - s/2, s, s); ctx.fill(); ctx.stroke();
+      }
+
+      ctx.fillStyle = '#e5e7eb';
+      ctx.font = 'bold 18px system-ui';
+      ctx.fillText('Hello, Canvas!', 20, 28);
+    }
+
+    let mouseX = canvas.width/2, mouseY = canvas.height/2;
+    canvas.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouseX = (e.clientX - rect.left) * (canvas.width / rect.width);
+      mouseY = (e.clientY - rect.top) * (canvas.height / rect.height);
+    });
+
+    canvas.addEventListener('click', () => {
+      running = !running;
+      statusEl.textContent = running ? 'playing' : 'paused';
+      if (running) loop();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key.toLowerCase() === 'r') shape = 'rect';
+      if (e.key.toLowerCase() === 'c') shape = 'circle';
+      shapeEl.textContent = shape;
+    });
+
+    function loop(){
+      const {width:w, height:h} = canvas;
+      draw(w, h, mouseX, mouseY);
+      t++;
+      if (running) requestAnimationFrame(loop);
+    }
+    loop();
+  </script>
+</body>
+</html>
